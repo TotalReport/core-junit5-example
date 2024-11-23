@@ -17,29 +17,34 @@ public class DisabledTestTest {
     }
 
     @BeforeEach
-    public void beforeEach() {
+    public void beforeEach() throws InterruptedException {
         log.info("beforeEach");
+        Thread.sleep(1);
     }
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
         log.info("Test method1");
+        Thread.sleep(1);
     }
 
     @Disabled
     @Test
-    public void test2() {
+    public void test2() throws InterruptedException {
         log.info("Test method2");
+        Thread.sleep(1);
     }
 
     @Test
-    public void test3() {
+    public void test3() throws InterruptedException {
         log.info("Test method3");
+        Thread.sleep(1);
     }
 
     @AfterEach
-    public void afterEach() {
+    public void afterEach() throws InterruptedException {
         log.info("afterEach");
+        Thread.sleep(1);
     }
 
     @AfterAll

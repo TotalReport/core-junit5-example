@@ -25,48 +25,57 @@ public class TripledSimpleTest {
     }
 
     @BeforeEach
-    public void beforeEach1() {
+    public void beforeEach1() throws InterruptedException {
         log.info("before each activity 1");
+        Thread.sleep(1);
     }
 
     @BeforeEach
-    public void beforeEach2() {
+    public void beforeEach2() throws InterruptedException {
         log.info("before each activity 2");
+        Thread.sleep(1);
     }
 
     @BeforeEach
-    public void beforeEach3() {
+    public void beforeEach3() throws InterruptedException {
         log.info("before each activity 3");
+        Thread.sleep(1);
     }
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
         log.info("Test activity 1");
+        Thread.sleep(1);
     }
 
     @Test
-    public void test2() {
+    public void test2() throws InterruptedException {
         log.info("Test activity 2");
+        Thread.sleep(1);
     }
 
     @Test
-    public void test3() {
+    public void test3() throws InterruptedException {
         log.info("Test activity 3");
+        Thread.sleep(1);
     }
 
     @AfterEach
-    public void afterEach1() {
+    public void afterEach1() throws InterruptedException {
         log.info("after each activity 1");
+        Thread.sleep(1);
     }
 
     @AfterEach
-    public void afterEach2() {
+    public void afterEach2() throws InterruptedException {
         log.info("after each activity 2");
+        Thread.sleep(1);
     }
 
     @AfterEach
-    public void afterEach3() {
+    public void afterEach3() throws InterruptedException {
         log.info("after each activity 3");
+        Thread.sleep(1);
     }
 
     @AfterAll
