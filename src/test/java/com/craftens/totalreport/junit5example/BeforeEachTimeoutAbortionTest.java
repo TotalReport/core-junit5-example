@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Timeout;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class BeforeEachTimeoutAssertionTest {
+public class BeforeEachTimeoutAbortionTest {
 
     @BeforeAll
     public static void beforeAll() throws InterruptedException {
@@ -26,7 +26,7 @@ public class BeforeEachTimeoutAssertionTest {
     }
 
     @BeforeEach
-    @Timeout(value = 1, unit = TimeUnit.NANOSECONDS)
+    @Timeout(value = 1, unit = TimeUnit.NANOSECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
     public void beforeEach2() throws InterruptedException {
         log.info("beforeEach2");
         Thread.sleep(1);
